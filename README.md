@@ -5,7 +5,7 @@ A comprehensive Streamlit-based application for cybersecurity compliance consult
 ## 🏗️ Project Structure
 
 ```
-TCP/
+cyber_tonic/
 ├── apps/                    # Streamlit applications
 │   ├── main.py             # Home page with launch buttons
 │   ├── standards_navigator.py  # Standards research tool
