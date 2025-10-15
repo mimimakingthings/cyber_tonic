@@ -1,4 +1,4 @@
-# TCP Cybersecurity Compliance Hub
+# Cyber Tonic Cybersecurity Compliance Hub
 
 A comprehensive Streamlit-based application for cybersecurity compliance consulting with an organized, professional structure.
 
