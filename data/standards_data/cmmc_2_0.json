@@ -1,0 +1,91 @@
+{
+  "standard_id": "CMMC_2.0",
+  "name": "Cybersecurity Maturity Model Certification 2.0",
+  "version": "2.0",
+  "overview": "Cybersecurity Maturity Model Certification 2.0 - DoD contractor cybersecurity requirements. Focus on Level 2 (110 practices) for most contractors handling Controlled Unclassified Information (CUI).",
+  "region": "USA (DoD contractors)",
+  "type": "Certification",
+  "last_updated": "2021-11-04",
+  "official_url": "https://dodcio.defense.gov/CMMC/",
+  "functions": {
+    "Access_Control": {
+      "description": "Access control and identity management requirements",
+      "categories": ["AC.1.001", "AC.2.007"],
+      "subcategories": {
+        "AC.1.001": {
+          "description": "Limit information system access to authorized users, processes acting on behalf of authorized users, and devices",
+          "examples": "Zero-trust network access, Device compliance checking, Identity verification",
+          "use_cases": "Microsoft Entra ID, Cisco ISE, Palo Alto Networks Prisma Access",
+          "regional_relevance": ["USA"],
+          "tech_recommendations": ["Microsoft Entra ID", "Cisco ISE", "Palo Alto Networks Prisma Access"],
+          "mappings": {
+            "NIST_CSF_2.0": "PR.AC-01",
+            "ISO_27001_2022": "A.9.1.1"
+          }
+        },
+        "AC.2.007": {
+          "description": "Employ the principle of least privilege, including for specific security functions and privileged accounts",
+          "examples": "Privileged access management, Just-in-time access, Role-based access control",
+          "use_cases": "CyberArk, BeyondTrust, Centrify",
+          "regional_relevance": ["USA"],
+          "tech_recommendations": ["CyberArk", "BeyondTrust", "Centrify"],
+          "mappings": {
+            "NIST_CSF_2.0": "PR.AC-04",
+            "ISO_27001_2022": "A.9.2.1"
+          }
+        }
+      }
+    },
+    "System_Communications": {
+      "description": "System and communications protection requirements",
+      "categories": ["SC.1.175"],
+      "subcategories": {
+        "SC.1.175": {
+          "description": "Employ cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission",
+          "examples": "Data encryption in transit, Secure communications, TLS/SSL implementation",
+          "use_cases": "Microsoft BitLocker, AWS KMS, Thales CipherTrust",
+          "regional_relevance": ["USA"],
+          "tech_recommendations": ["Microsoft BitLocker", "AWS KMS", "Thales CipherTrust"],
+          "mappings": {
+            "NIST_CSF_2.0": "PR.DS-02",
+            "ISO_27001_2022": "A.10.1.1"
+          }
+        }
+      }
+    },
+    "System_Information_Integrity": {
+      "description": "System and information integrity monitoring requirements",
+      "categories": ["SI.2.216"],
+      "subcategories": {
+        "SI.2.216": {
+          "description": "Monitor organizational systems, including inbound and outbound communications traffic",
+          "examples": "Network monitoring, Threat detection, Traffic analysis",
+          "use_cases": "Microsoft Sentinel, Splunk, IBM QRadar",
+          "regional_relevance": ["USA"],
+          "tech_recommendations": ["Microsoft Sentinel", "Splunk", "IBM QRadar"],
+          "mappings": {
+            "NIST_CSF_2.0": "DE.CM-01",
+            "ISO_27001_2022": "A.12.4.1"
+          }
+        }
+      }
+    },
+    "Incident_Response": {
+      "description": "Incident response and handling requirements",
+      "categories": ["IR.2.092"],
+      "subcategories": {
+        "IR.2.092": {
+          "description": "Establish an operational incident-handling capability for organizational systems",
+          "examples": "Incident response automation, CUI breach handling, Response procedures",
+          "use_cases": "ServiceNow Security Operations, IBM Resilient, Microsoft Defender for Cloud",
+          "regional_relevance": ["USA"],
+          "tech_recommendations": ["ServiceNow Security Operations", "IBM Resilient", "Microsoft Defender for Cloud"],
+          "mappings": {
+            "NIST_CSF_2.0": "RS.RP-01",
+            "ISO_27001_2022": "A.16.1.1"
+          }
+        }
+      }
+    }
+  }
+}

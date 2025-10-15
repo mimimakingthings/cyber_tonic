@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-10-15",
+    "description": "Master index of cybersecurity standards and frameworks",
+    "total_standards": 5
+  },
+  "standards": {
+    "NIST_CSF_2.0": {
+      "file": "nist_csf_2_0.json",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "type": "Framework",
+      "region": "USA (Global applicability)",
+      "status": "Active",
+      "priority": "High"
+    },
+    "ISO_27001_2022": {
+      "file": "iso_27001_2022.json",
+      "name": "ISO/IEC 27001:2022",
+      "type": "Standard",
+      "region": "Global (High relevance for EU/UK)",
+      "status": "Active",
+      "priority": "High"
+    },
+    "GDPR": {
+      "file": "gdpr.json",
+      "name": "General Data Protection Regulation",
+      "type": "Regulation",
+      "region": "EU/UK (Global impact)",
+      "status": "Active",
+      "priority": "High"
+    },
+    "CMMC_2.0": {
+      "file": "cmmc_2_0.json",
+      "name": "Cybersecurity Maturity Model Certification 2.0",
+      "type": "Certification",
+      "region": "USA (DoD contractors)",
+      "status": "Active",
+      "priority": "Medium"
+    },
+    "EU_NIS2": {
+      "file": "eu_nis2.json",
+      "name": "EU NIS2 Directive",
+      "type": "Directive",
+      "region": "EU (Global impact)",
+      "status": "Active",
+      "priority": "High"
+    }
+  },
+  "categories": {
+    "Frameworks": ["NIST_CSF_2.0"],
+    "Standards": ["ISO_27001_2022"],
+    "Regulations": ["GDPR"],
+    "Certifications": ["CMMC_2.0"],
+    "Directives": ["EU_NIS2"]
+  },
+  "regions": {
+    "USA": ["NIST_CSF_2.0", "CMMC_2.0"],
+    "EU": ["GDPR", "EU_NIS2"],
+    "UK": ["GDPR"],
+    "Global": ["ISO_27001_2022"]
+  }
+}

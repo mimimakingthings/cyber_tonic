@@ -1,0 +1,90 @@
+{
+  "standard_id": "ISO_27001_2022",
+  "name": "ISO/IEC 27001:2022",
+  "version": "2022",
+  "overview": "Information Security Management Systems - International standard for establishing, implementing, maintaining, and continually improving an ISMS. Contains 93 controls in 4 categories: Organizational, People, Physical, and Technological. High relevance for EU/UK operations.",
+  "region": "Global (High relevance for EU/UK)",
+  "type": "Standard",
+  "last_updated": "2022-10-25",
+  "official_url": "https://www.iso.org/standard/27001",
+  "functions": {
+    "4_Context": {
+      "description": "Understanding the organization and its context",
+      "categories": ["4.1", "4.2", "4.3", "4.4"],
+      "subcategories": {
+        "4.1": {
+          "description": "Understanding the organization and its context",
+          "examples": "Organizational context analysis, Stakeholder identification, External and internal issues",
+          "use_cases": "Strategic planning, Risk assessment, Compliance mapping",
+          "regional_relevance": ["EU", "UK", "USA"],
+          "tech_recommendations": ["Microsoft Purview", "OneTrust", "ServiceNow GRC"],
+          "mappings": {
+            "NIST_CSF_2.0": "GV.RR-01"
+          }
+        },
+        "4.2": {
+          "description": "Understanding the needs and expectations of interested parties",
+          "examples": "Stakeholder analysis, Legal requirements mapping, Customer expectations",
+          "use_cases": "Compliance management, Stakeholder engagement, Legal alignment",
+          "regional_relevance": ["EU", "UK", "USA"],
+          "tech_recommendations": ["OneTrust", "TrustArc", "Microsoft Purview"],
+          "mappings": {
+            "NIST_CSF_2.0": "ID.GV-03"
+          }
+        }
+      }
+    },
+    "5_Leadership": {
+      "description": "Leadership and commitment for information security",
+      "categories": ["5.1", "5.2", "5.3"],
+      "subcategories": {
+        "5.1": {
+          "description": "Leadership and commitment",
+          "examples": "Executive commitment, Resource allocation, Policy endorsement",
+          "use_cases": "Executive governance, Leadership engagement, Strategic alignment",
+          "regional_relevance": ["EU", "UK", "USA"],
+          "tech_recommendations": ["Microsoft Purview", "ServiceNow GRC", "OneTrust"],
+          "mappings": {
+            "NIST_CSF_2.0": "GV.RR-01"
+          }
+        },
+        "5.2": {
+          "description": "Policy",
+          "examples": "Information security policy, Policy communication, Policy review",
+          "use_cases": "Policy management, Communication strategy, Policy lifecycle",
+          "regional_relevance": ["EU", "UK", "USA"],
+          "tech_recommendations": ["OneTrust", "TrustArc", "Microsoft Purview"],
+          "mappings": {
+            "NIST_CSF_2.0": "GV.PO-01"
+          }
+        }
+      }
+    },
+    "Annex_A_Organizational": {
+      "description": "Organizational controls for information security",
+      "categories": ["A.5", "A.6", "A.7", "A.8"],
+      "subcategories": {
+        "A.5.1.1": {
+          "description": "Policies for information security",
+          "examples": "Information security policies, Policy development, Policy management",
+          "use_cases": "Policy management, Governance framework, Security policies",
+          "regional_relevance": ["EU", "UK", "USA"],
+          "tech_recommendations": ["Microsoft Purview", "OneTrust", "TrustArc"],
+          "mappings": {
+            "NIST_CSF_2.0": "GV.PO-01"
+          }
+        },
+        "A.6.1.1": {
+          "description": "Screening",
+          "examples": "Background checks, Employee screening, Contractor verification",
+          "use_cases": "Employee screening, Background verification, Contractor management",
+          "regional_relevance": ["EU", "UK", "USA"],
+          "tech_recommendations": ["Sterling Background Checks", "HireRight", "First Advantage"],
+          "mappings": {
+            "NIST_CSF_2.0": "GV.RR-04"
+          }
+        }
+      }
+    }
+  }
+}
