@@ -14,22 +14,29 @@ Cyber Tonic/
 │   ├── 🐍 standards_loader.py # Standards data loader
 │   ├── 🐍 utils.py            # Validation, file handling, visualization
 │   ├── 🐍 data_persistence.py # Data persistence and storage management
-│   └── 🐍 sidebar_component.py # Enhanced sidebar navigation component
+│   ├── 🐍 sidebar_component.py # Enhanced sidebar navigation component
+│   └── 🐍 assessment_enhancements.py # Advanced assessment features
 ├── 📁 data/                   # Data Files & Standards
 │   ├── 📁 standards_data/     # Standards JSON data files
 │   │   └── 📄 nist-csf-2.0.json  # NIST Cybersecurity Framework 2.0
-│   └── 📁 storage/            # Persistent data storage
-│       ├── 📄 clients.json    # Client data
-│       ├── 📄 assessments.json # Assessment data
-│       ├── 📄 evidence_files.json # Evidence file references
-│       └── 📁 backups/        # Automatic backups
+│   ├── 📁 storage/            # Persistent data storage
+│   │   ├── 📄 clients.json    # Client data
+│   │   ├── 📄 assessments.json # Assessment data
+│   │   ├── 📄 evidence_files.json # Evidence file references
+│   │   └── 📁 backups/        # Automatic backups
+│   └── 📁 schemas/            # Data schemas
+│       └── 📄 assessment_schema_v2.json # Assessment data schema
 ├── 📁 assets/                 # Static Assets
 │   └── 🎨 style.css           # Custom CSS styling
 ├── 📁 docs/                   # Documentation
 │   ├── 📄 CLIENT_PORTAL_README.md  # Client portal docs
 │   ├── 📄 LAUNCH_GUIDE.md    # Launch instructions
 │   ├── 📄 DATA_PERSISTENCE.md # Data persistence documentation
-│   └── 📄 ENHANCED_SIDEBAR.md # Enhanced sidebar component docs
+│   ├── 📄 ENHANCED_SIDEBAR.md # Enhanced sidebar component docs
+│   ├── 📄 ASSESSMENT_ENHANCEMENTS_SUMMARY.md # Assessment features summary
+│   └── 📄 VISUAL_ENHANCEMENTS_IMPLEMENTATION.md # Visual enhancements guide
+├── 📁 tests/                  # Test Files
+│   └── 🧪 test_assessment_enhancements.py # Unit tests
 ├── 🚀 launch.py              # Master launcher (Python)
 ├── 🚀 launch.sh              # Master launcher (Shell)
 ├── 📄 requirements.txt       # Python dependencies
