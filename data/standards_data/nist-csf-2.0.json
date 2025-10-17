@@ -1,0 +1,630 @@
+{
+  "framework": "NIST Cybersecurity Framework 2.0",
+  "version": "2.0",
+  "created_date": "2025-10-16T13:00:18.272593",
+  "expected_subcategory_count": 77,
+  "framework_version": "NIST CSF 2.0",
+  "source": "NIST CSWP 29 Appendix A",
+  "functions": [
+    {
+      "id": "GV",
+      "name": "Govern",
+      "description": "The Govern function provides organizational cybersecurity risk management strategy, expectations, and policy.",
+      "categories": [
+        {
+          "id": "GV.OC",
+          "name": "Organizational Context",
+          "description": "Organizational Context category for Govern function.",
+          "subcategories": [
+            {
+              "id": "GV.OC-01",
+              "description": "Legal, regulatory, and contractual requirements regarding cybersecurity—including privacy and civil liberties obligations—are understood and managed"
+            },
+            {
+              "id": "GV.OC-02",
+              "description": "The organization's role in the supply chain is understood and communicated"
+            },
+            {
+              "id": "GV.OC-03",
+              "description": "Critical infrastructure dependencies and critical dependencies for essential services are identified and prioritized"
+            },
+            {
+              "id": "GV.OC-04",
+              "description": "The organization's cybersecurity priorities and risk appetite are communicated"
+            }
+          ]
+        },
+        {
+          "id": "GV.RM",
+          "name": "Risk Management Strategy",
+          "description": "Risk Management Strategy category for Govern function.",
+          "subcategories": [
+            {
+              "id": "GV.RM-01",
+              "description": "Organizational cybersecurity risk management strategy is established"
+            },
+            {
+              "id": "GV.RM-02",
+              "description": "Organizational risk tolerance is determined and clearly expressed"
+            },
+            {
+              "id": "GV.RM-03",
+              "description": "The organization's determination of risk tolerance is informed by its role in critical infrastructure and sector specific risk analysis"
+            },
+            {
+              "id": "GV.RM-04",
+              "description": "Risk management processes are established, managed, and agreed to by organizational stakeholders"
+            }
+          ]
+        },
+        {
+          "id": "GV.RR",
+          "name": "Roles, Responsibilities, and Authorities",
+          "description": "Roles, Responsibilities, and Authorities category for Govern function.",
+          "subcategories": [
+            {
+              "id": "GV.RR-01",
+              "description": "Organizational leadership is responsible for cybersecurity governance"
+            },
+            {
+              "id": "GV.RR-02",
+              "description": "Roles and responsibilities for cybersecurity risk management are assigned and communicated"
+            },
+            {
+              "id": "GV.RR-03",
+              "description": "Authorities for cybersecurity decision-making are delegated appropriately"
+            }
+          ]
+        },
+        {
+          "id": "GV.PO",
+          "name": "Policy",
+          "description": "Policy category for Govern function.",
+          "subcategories": [
+            {
+              "id": "GV.PO-01",
+              "description": "Cybersecurity policies are developed and maintained"
+            },
+            {
+              "id": "GV.PO-02",
+              "description": "Policies are communicated to all relevant stakeholders"
+            }
+          ]
+        },
+        {
+          "id": "GV.OV",
+          "name": "Oversight",
+          "description": "Oversight category for Govern function.",
+          "subcategories": [
+            {
+              "id": "GV.OV-01",
+              "description": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction"
+            },
+            {
+              "id": "GV.OV-02",
+              "description": "Cybersecurity risk management strategy is reviewed and adjusted to address changes to the organization, threats, technologies, and business/mission objectives"
+            },
+            {
+              "id": "GV.OV-03",
+              "description": "Cybersecurity risk management strategy is reviewed and adjusted to address changes to the organization, threats, technologies, and business/mission objectives"
+            }
+          ]
+        },
+        {
+          "id": "GV.SC",
+          "name": "Supply Chain Risk Management",
+          "description": "Supply Chain Risk Management category for Govern function.",
+          "subcategories": [
+            {
+              "id": "GV.SC-01",
+              "description": "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders"
+            },
+            {
+              "id": "GV.SC-02",
+              "description": "Suppliers and third-party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process"
+            },
+            {
+              "id": "GV.SC-03",
+              "description": "Contracts with suppliers and third-party partners are used to implement appropriate measures designed to meet the objectives of an organization's cybersecurity program"
+            },
+            {
+              "id": "GV.SC-04",
+              "description": "Plans and procedures are developed and implemented to maintain or restore the supply of critical products/services at acceptable levels of risk"
+            },
+            {
+              "id": "GV.SC-05",
+              "description": "Supply chain risk management plans, procedures, and processes are established, managed, and agreed to by organizational stakeholders"
+            },
+            {
+              "id": "GV.SC-06",
+              "description": "Plans and procedures are developed and implemented to maintain or restore the supply of critical products/services at acceptable levels of risk"
+            },
+            {
+              "id": "GV.SC-07",
+              "description": "Supply chain risk management plans, procedures, and processes are established, managed, and agreed to by organizational stakeholders"
+            },
+            {
+              "id": "GV.SC-08",
+              "description": "Plans and procedures are developed and implemented to maintain or restore the supply of critical products/services at acceptable levels of risk"
+            },
+            {
+              "id": "GV.SC-09",
+              "description": "Supply chain risk management plans, procedures, and processes are established, managed, and agreed to by organizational stakeholders"
+            },
+            {
+              "id": "GV.SC-10",
+              "description": "Plans and procedures are developed and implemented to maintain or restore the supply of critical products/services at acceptable levels of risk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ID",
+      "name": "Identify",
+      "description": "The Identify function develops an organizational understanding to manage cybersecurity risk to systems, assets, data, and capabilities.",
+      "categories": [
+        {
+          "id": "ID.AM",
+          "name": "Asset Management",
+          "description": "Asset Management category for Identify function.",
+          "subcategories": [
+            {
+              "id": "ID.AM-01",
+              "description": "Physical devices and systems within the organization are inventoried"
+            },
+            {
+              "id": "ID.AM-02",
+              "description": "Software platforms and applications within the organization are inventoried"
+            },
+            {
+              "id": "ID.AM-03",
+              "description": "Organizational communication and data flows are mapped"
+            },
+            {
+              "id": "ID.AM-04",
+              "description": "External information systems are catalogued"
+            },
+            {
+              "id": "ID.AM-05",
+              "description": "Resources (hardware, devices, data, time, and software) are prioritized based on their classification, criticality, and business value"
+            },
+            {
+              "id": "ID.AM-06",
+              "description": "Cybersecurity roles and responsibilities for the entire workforce and third-party stakeholders (e.g., suppliers, customers, partners) are established"
+            }
+          ]
+        },
+        {
+          "id": "ID.BE",
+          "name": "Business Environment",
+          "description": "The organization's mission, objectives, stakeholders, and activities are understood and prioritized; this information is used to inform cybersecurity roles, responsibilities, and risk management decisions.",
+          "subcategories": [
+            {
+              "id": "ID.BE-01",
+              "description": "The organization's role in the supply chain is identified and communicated"
+            },
+            {
+              "id": "ID.BE-02",
+              "description": "The organization's place in critical infrastructure and its industry sector is identified and communicated"
+            },
+            {
+              "id": "ID.BE-03",
+              "description": "Priorities for organizational mission, objectives, and activities are established and communicated"
+            },
+            {
+              "id": "ID.BE-04",
+              "description": "Dependencies and critical functions for delivery of critical services are established"
+            },
+            {
+              "id": "ID.BE-05",
+              "description": "Resilience requirements to support delivery of critical services are established"
+            }
+          ]
+        },
+        {
+          "id": "ID.RA",
+          "name": "Risk Assessment",
+          "description": "Risk Assessment category for Identify function.",
+          "subcategories": [
+            {
+              "id": "ID.RA-01",
+              "description": "Asset vulnerabilities are identified and documented"
+            },
+            {
+              "id": "ID.RA-02",
+              "description": "Cyber threat intelligence is received from information sharing forums and sources"
+            },
+            {
+              "id": "ID.RA-03",
+              "description": "Threats, both internal and external, are identified and documented"
+            },
+            {
+              "id": "ID.RA-04",
+              "description": "Potential business impacts and likelihoods are identified"
+            },
+            {
+              "id": "ID.RA-05",
+              "description": "Threats, vulnerabilities, likelihoods, and impacts are used to determine risk"
+            },
+            {
+              "id": "ID.RA-06",
+              "description": "Risk responses are identified and prioritized"
+            }
+          ]
+        },
+        {
+          "id": "ID.IM",
+          "name": "Improvement",
+          "description": "Improvement category for Identify function.",
+          "subcategories": [
+            {
+              "id": "ID.IM-01",
+              "description": "Cybersecurity risk management program is improved by incorporating lessons learned and best practices"
+            },
+            {
+              "id": "ID.IM-02",
+              "description": "Cybersecurity risk management program is improved by incorporating lessons learned and best practices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PR",
+      "name": "Protect",
+      "description": "The Protect function outlines appropriate safeguards to ensure delivery of critical infrastructure services.",
+      "categories": [
+        {
+          "id": "PR.AA",
+          "name": "Identity Management and Access Control",
+          "description": "Identity Management and Access Control category for Protect function.",
+          "subcategories": [
+            {
+              "id": "PR.AA-01",
+              "description": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users and processes"
+            },
+            {
+              "id": "PR.AA-02",
+              "description": "Physical access to assets is managed and protected"
+            },
+            {
+              "id": "PR.AA-03",
+              "description": "Remote access is managed"
+            },
+            {
+              "id": "PR.AA-04",
+              "description": "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties"
+            }
+          ]
+        },
+        {
+          "id": "PR.AT",
+          "name": "Awareness and Training",
+          "description": "Awareness and Training category for Protect function.",
+          "subcategories": [
+            {
+              "id": "PR.AT-01",
+              "description": "All users are informed and trained"
+            },
+            {
+              "id": "PR.AT-02",
+              "description": "Privileged users understand their roles and responsibilities"
+            },
+            {
+              "id": "PR.AT-03",
+              "description": "Third-party stakeholders (e.g., suppliers, customers, partners) understand their roles and responsibilities"
+            },
+            {
+              "id": "PR.AT-04",
+              "description": "Senior executives understand their roles and responsibilities"
+            },
+            {
+              "id": "PR.AT-05",
+              "description": "Physical and cybersecurity personnel understand their roles and responsibilities"
+            }
+          ]
+        },
+        {
+          "id": "PR.DS",
+          "name": "Data Security",
+          "description": "Data Security category for Protect function.",
+          "subcategories": [
+            {
+              "id": "PR.DS-01",
+              "description": "Data-at-rest is protected"
+            },
+            {
+              "id": "PR.DS-02",
+              "description": "Data-in-transit is protected"
+            },
+            {
+              "id": "PR.DS-03",
+              "description": "Assets are formally managed throughout removal, transfers, and disposition"
+            },
+            {
+              "id": "PR.DS-04",
+              "description": "Adequate capacity to ensure availability is maintained"
+            },
+            {
+              "id": "PR.DS-05",
+              "description": "Protections against data leaks are implemented"
+            },
+            {
+              "id": "PR.DS-06",
+              "description": "Integrity checking mechanisms are used to verify software, firmware, and information integrity"
+            },
+            {
+              "id": "PR.DS-07",
+              "description": "The development and testing environment(s) are separate from the production environment"
+            },
+            {
+              "id": "PR.DS-08",
+              "description": "Integrity checking mechanisms are used to verify hardware integrity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DE",
+      "name": "Detect",
+      "description": "The Detect function defines the appropriate activities to identify the occurrence of a cybersecurity event.",
+      "categories": [
+        {
+          "id": "DE.AE",
+          "name": "Anomalies and Events",
+          "description": "Anomalies and Events category for Detect function.",
+          "subcategories": [
+            {
+              "id": "DE.AE-01",
+              "description": "A baseline of network operations and expected data flows for users and systems is established and managed"
+            },
+            {
+              "id": "DE.AE-02",
+              "description": "Detected events are analyzed to understand attack targets and methods"
+            },
+            {
+              "id": "DE.AE-03",
+              "description": "Event data are collected and correlated from multiple sources and sensors"
+            },
+            {
+              "id": "DE.AE-04",
+              "description": "Impact of events is determined"
+            },
+            {
+              "id": "DE.AE-05",
+              "description": "Incident alert thresholds are established"
+            }
+          ]
+        },
+        {
+          "id": "DE.CM",
+          "name": "Security Continuous Monitoring",
+          "description": "Security Continuous Monitoring category for Detect function.",
+          "subcategories": [
+            {
+              "id": "DE.CM-01",
+              "description": "The network is monitored to detect potential cybersecurity events"
+            },
+            {
+              "id": "DE.CM-02",
+              "description": "The physical environment is monitored to detect potential cybersecurity events"
+            },
+            {
+              "id": "DE.CM-03",
+              "description": "Personnel activity is monitored to detect potential cybersecurity events"
+            },
+            {
+              "id": "DE.CM-04",
+              "description": "Malicious code is detected"
+            },
+            {
+              "id": "DE.CM-05",
+              "description": "Unauthorized mobile code is detected"
+            },
+            {
+              "id": "DE.CM-06",
+              "description": "External service provider activity is monitored to detect potential cybersecurity events"
+            },
+            {
+              "id": "DE.CM-07",
+              "description": "Monitoring for unauthorized personnel, connections, devices, and software is performed"
+            },
+            {
+              "id": "DE.CM-08",
+              "description": "Vulnerability scans are performed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RS",
+      "name": "Respond",
+      "description": "The Respond function includes appropriate activities to take action regarding a detected cybersecurity incident.",
+      "categories": [
+        {
+          "id": "RS.RP",
+          "name": "Response Planning",
+          "description": "Response Planning category for Respond function.",
+          "subcategories": [
+            {
+              "id": "RS.RP-01",
+              "description": "Response plan is executed during or after an incident"
+            },
+            {
+              "id": "RS.RP-02",
+              "description": "Response plans incorporate lessons learned"
+            },
+            {
+              "id": "RS.RP-03",
+              "description": "Incident response is tested"
+            },
+            {
+              "id": "RS.RP-04",
+              "description": "Incident response plans incorporate lessons learned"
+            }
+          ]
+        },
+        {
+          "id": "RS.CO",
+          "name": "Communications",
+          "description": "Communications category for Respond function.",
+          "subcategories": [
+            {
+              "id": "RS.CO-01",
+              "description": "Personnel know their roles and order of operations when a response is needed"
+            },
+            {
+              "id": "RS.CO-02",
+              "description": "Incidents are reported consistent with established criteria"
+            },
+            {
+              "id": "RS.CO-03",
+              "description": "Information is shared consistent with response plans"
+            },
+            {
+              "id": "RS.CO-04",
+              "description": "Coordination with stakeholders occurs consistent with response plans"
+            },
+            {
+              "id": "RS.CO-05",
+              "description": "Voluntary information sharing occurs with external stakeholders to achieve broader cybersecurity situational awareness"
+            }
+          ]
+        },
+        {
+          "id": "RS.AN",
+          "name": "Analysis",
+          "description": "Analysis category for Respond function.",
+          "subcategories": [
+            {
+              "id": "RS.AN-01",
+              "description": "Notifications from detection systems are investigated"
+            },
+            {
+              "id": "RS.AN-02",
+              "description": "The impact of the incident is understood"
+            },
+            {
+              "id": "RS.AN-04",
+              "description": "Incidents are categorized consistent with response plans"
+            },
+            {
+              "id": "RS.AN-05",
+              "description": "Processes are established to receive, analyze and respond to vulnerabilities disclosed to the organization from internal and external sources"
+            },
+            {
+              "id": "RS.AN-03",
+              "description": "Forensics are performed"
+            }
+          ]
+        },
+        {
+          "id": "RS.MI",
+          "name": "Mitigation",
+          "description": "Mitigation category for Respond function.",
+          "subcategories": [
+            {
+              "id": "RS.MI-01",
+              "description": "Incidents are contained"
+            },
+            {
+              "id": "RS.MI-02",
+              "description": "Incidents are mitigated"
+            },
+            {
+              "id": "RS.MI-04",
+              "description": "Incidents are resolved"
+            },
+            {
+              "id": "RS.MI-03",
+              "description": "Newly identified vulnerabilities are mitigated or documented as accepted risks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RC",
+      "name": "Recover",
+      "description": "The Recover function identifies appropriate activities to maintain plans for resilience and to restore any capabilities or services that were impaired due to a cybersecurity incident.",
+      "categories": [
+        {
+          "id": "RC.RP",
+          "name": "Recovery Planning",
+          "description": "Recovery Planning category for Recover function.",
+          "subcategories": [
+            {
+              "id": "RC.RP-01",
+              "description": "Recovery plan is executed during or after a cybersecurity incident"
+            },
+            {
+              "id": "RC.RP-02",
+              "description": "Recovery plans incorporate lessons learned"
+            },
+            {
+              "id": "RC.RP-03",
+              "description": "Recovery plans incorporate information obtained from dependencies and third-party stakeholders"
+            },
+            {
+              "id": "RC.RP-04",
+              "description": "The integrity of backups and other restoration assets is verified before using them for restoration"
+            },
+            {
+              "id": "RC.RP-05",
+              "description": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms"
+            },
+            {
+              "id": "RC.RP-06",
+              "description": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed"
+            }
+          ]
+        },
+        {
+          "id": "RC.IM",
+          "name": "Improvements",
+          "description": "Improvements category for Recover function.",
+          "subcategories": [
+            {
+              "id": "RC.IM-01",
+              "description": "Recovery plans incorporate lessons learned"
+            },
+            {
+              "id": "RC.IM-02",
+              "description": "Recovery strategies are updated"
+            },
+            {
+              "id": "RC.IM-03",
+              "description": "Recovery plans incorporate lessons learned"
+            }
+          ]
+        },
+        {
+          "id": "RC.CO",
+          "name": "Communications",
+          "description": "Communications category for Recover function.",
+          "subcategories": [
+            {
+              "id": "RC.CO-01",
+              "description": "Public relations are managed"
+            },
+            {
+              "id": "RC.CO-02",
+              "description": "Reputation is repaired after an incident"
+            },
+            {
+              "id": "RC.CO-04",
+              "description": "Public updates on incident recovery are shared using approved methods and messaging"
+            },
+            {
+              "id": "RC.CO-03",
+              "description": "Recovery activities and progress in restoring operational capabilities are communicated to designated stakeholders"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

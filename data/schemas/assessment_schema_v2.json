@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cyber Tonic Assessment Schema v2.0",
+  "description": "Enhanced assessment data schema with weights, evidence metadata, and version control",
+  "type": "object",
+  "properties": {
+    "assessments": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9-]+$": {
+          "type": "object",
+          "properties": {
+            "weights": {
+              "type": "object",
+              "description": "Function weights for weighted scoring",
+              "properties": {
+                "GV": {"type": "number", "minimum": 0.1, "maximum": 2.0},
+                "ID": {"type": "number", "minimum": 0.1, "maximum": 2.0},
+                "PR": {"type": "number", "minimum": 0.1, "maximum": 2.0},
+                "DE": {"type": "number", "minimum": 0.1, "maximum": 2.0},
+                "RS": {"type": "number", "minimum": 0.1, "maximum": 2.0},
+                "RC": {"type": "number", "minimum": 0.1, "maximum": 2.0}
+              },
+              "additionalProperties": false
+            },
+            "weights_updated": {
+              "type": "string",
+              "format": "date-time",
+              "description": "ISO timestamp when weights were last updated"
+            },
+            "snapshots": {
+              "type": "array",
+              "description": "Assessment snapshots for version control",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {"type": "string", "format": "uuid"},
+                  "timestamp": {"type": "string", "format": "date-time"},
+                  "data": {"type": "object"}
+                },
+                "required": ["id", "timestamp", "data"]
+              },
+              "maxItems": 10
+            }
+          },
+          "patternProperties": {
+            "^[A-Z]{2}\\.[A-Z]{2}-[0-9]{2}$": {
+              "type": "object",
+              "description": "NIST CSF subcategory assessment",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": ["Not Implemented", "Partially Implemented", "Fully Implemented", "Not Applicable"]
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10
+                },
+                "notes": {
+                  "type": "string",
+                  "maxLength": 2000
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "description": "Legacy evidence file names"
+                },
+                "evidence_metadata": {
+                  "type": "object",
+                  "description": "Enhanced evidence metadata",
+                  "properties": {
+                    "files": {
+                      "type": "array",
+                      "items": {"type": "string"},
+                      "description": "Evidence file names"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {"type": "string"},
+                      "description": "Evidence tags for search and categorization"
+                    },
+                    "upload_date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "ISO timestamp when evidence was uploaded"
+                    },
+                    "subcategory_id": {
+                      "type": "string",
+                      "pattern": "^[A-Z]{2}\\.[A-Z]{2}-[0-9]{2}$"
+                    }
+                  },
+                  "required": ["files", "tags", "upload_date", "subcategory_id"]
+                }
+              },
+              "required": ["status", "score", "notes"]
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "total_clients": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "version": {
+          "type": "string",
+          "enum": ["1.0", "2.0"]
+        },
+        "schema_version": {
+          "type": "string",
+          "enum": ["1.0", "2.0"]
+        },
+        "features": {
+          "type": "object",
+          "properties": {
+            "weights": {"type": "boolean"},
+            "evidence_tags": {"type": "boolean"},
+            "trend_analysis": {"type": "boolean"},
+            "version_control": {"type": "boolean"}
+          }
+        }
+      },
+      "required": ["last_updated", "total_clients", "version"]
+    }
+  },
+  "required": ["assessments", "metadata"]
+}

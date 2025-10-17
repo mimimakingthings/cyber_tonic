@@ -1,0 +1,15 @@
+{
+  "assessments": {},
+  "metadata": {
+    "last_updated": "2025-10-17T14:42:55.597805",
+    "total_clients": 0,
+    "version": "2.0",
+    "schema_version": "2.0",
+    "features": {
+      "weights": true,
+      "evidence_tags": true,
+      "trend_analysis": true,
+      "version_control": true
+    }
+  }
+}

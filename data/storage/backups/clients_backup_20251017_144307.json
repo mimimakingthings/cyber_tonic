@@ -1,0 +1,22 @@
+{
+  "clients": [
+    {
+      "name": "TechNova Solutions",
+      "industry": "IT",
+      "contact": {
+        "email": "tom.bernard@technova.com",
+        "phone": "0240218599",
+        "primary": "Tom Bernard"
+      },
+      "size": "Medium (50-500)",
+      "notes": "TechNova has experienced rapid growth over the past three years, expanding from 50 to 250 employees, and now operates with a hybrid workforce (60% remote). They've recently suffered a minor phishing incident that exposed some internal emails but no customer data was compromised. The company is seeking an audit to improve their cybersecurity posture ahead of pursuing SOC 2 compliance.\n",
+      "id": "93ad2a9d-ee56-427f-a235-920529537b72",
+      "created_date": "2025-10-17T14:42:55.590257"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2025-10-17T14:42:55.596039",
+    "total_clients": 1,
+    "version": "1.0"
+  }
+}

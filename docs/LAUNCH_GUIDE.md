@@ -1,4 +1,4 @@
-# 🚀 TCP Launch Guide
+# 🚀 Cyber Tonic Launch Guide
 
 ## Quick Start Options
 

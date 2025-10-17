@@ -1,0 +1,490 @@
+/* Cyber Tonic Client Portal - Professional Styling */
+
+/* Root variables for consistent theming */
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #06b6d4;
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    
+    --border-color: #e5e7eb;
+    --border-hover: #d1d5db;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --bg-tertiary: #374151;
+    
+    --border-color: #374151;
+    --border-hover: #4b5563;
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Main container */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Progress bar styling */
+.stProgress .st-bo {
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    height: 8px;
+}
+
+.stProgress .st-bp {
+    background-color: var(--primary-color);
+    border-radius: var(--radius-md);
+    transition: width 0.3s ease;
+}
+
+/* Button styling */
+.stButton > button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+}
+
+.stButton > button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Secondary button */
+.stButton > button[kind="secondary"] {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-hover);
+}
+
+/* Form styling */
+.stTextInput > div > div > input,
+.stSelectbox > div > div > select,
+.stTextArea > div > div > textarea {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.stTextInput > div > div > input:focus,
+.stSelectbox > div > div > select:focus,
+.stTextArea > div > div > textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Number input */
+.stNumberInput > div > div > input {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* File uploader */
+.stFileUploader > div {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    transition: border-color 0.2s ease;
+}
+
+.stFileUploader > div:hover {
+    border-color: var(--primary-color);
+}
+
+/* Success/Error message styling */
+.stSuccess {
+    background-color: #d1fae5;
+    border: 1px solid var(--success-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    color: #065f46;
+    font-weight: 500;
+}
+
+.stError {
+    background-color: #fee2e2;
+    border: 1px solid var(--error-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    color: #991b1b;
+    font-weight: 500;
+}
+
+.stWarning {
+    background-color: #fef3c7;
+    border: 1px solid var(--warning-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    color: #92400e;
+    font-weight: 500;
+}
+
+.stInfo {
+    background-color: #cffafe;
+    border: 1px solid var(--info-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    color: #0e7490;
+    font-weight: 500;
+}
+
+/* Card-like containers */
+.assessment-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease;
+}
+
+.assessment-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: background-color 0.2s ease;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.streamlit-expanderContent {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: 1.5rem;
+}
+
+/* Tabs styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+    background-color: var(--bg-secondary);
+    padding: 0.5rem;
+    border-radius: var(--radius-lg);
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: transparent;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Sidebar styling */
+.css-1d391kg {
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+}
+
+/* Dataframe styling */
+.stDataFrame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.stDataFrame table {
+    background-color: var(--bg-primary);
+}
+
+.stDataFrame th {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stDataFrame td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.stDataFrame tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Download button */
+.stDownloadButton > button {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #059669;
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus indicators for keyboard navigation */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Loading spinner */
+.stSpinner > div {
+    border-color: var(--primary-color) transparent transparent transparent;
+}
+
+/* Metric styling */
+.stMetric {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stMetric > div {
+    color: var(--text-primary);
+}
+
+.stMetric > div > div:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Divider */
+.stDivider {
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* Code blocks */
+.stCode {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    overflow-x: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding: 1rem;
+    }
+    
+    h1 { font-size: 1.875rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    
+    .stButton > button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .assessment-card {
+        padding: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .stButton,
+    .stDownloadButton,
+    .stFileUploader {
+        display: none !important;
+    }
+    
+    .main .block-container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .assessment-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
+
+/* Animation for smooth transitions */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-hover);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --text-primary: #000000;
+        --text-secondary: #000000;
+    }
+    
+    [data-theme="dark"] {
+        --border-color: #ffffff;
+        --text-primary: #ffffff;
+        --text-secondary: #ffffff;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
