@@ -1,6 +1,14 @@
 # Cyber Tonic Cybersecurity Compliance Hub
 
-A comprehensive Streamlit-based application for cybersecurity compliance consulting with an organized, professional structure.
+Cyber Tonic is a Streamlit-based application for cybersecurity consultants to streamline compliance assessments, manage client data, and navigate standards like NIST CSF 2.0. With advanced visualization, data persistence, and professional reporting, it empowers consultants to deliver executive-grade deliverables efficiently.
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0+-red)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<!-- Add screenshots here when available -->
+<!-- ![Standards Navigator](assets/screenshots/standards_navigator.png) -->
+<!-- ![Client Portal](assets/screenshots/client_portal.png) -->
 
 ## 🏗️ Project Structure
 
@@ -46,27 +54,19 @@ Cyber Tonic/
 
 ## 🚀 Quick Start
 
-### Easy Launch Options
+### Prerequisites
+- Python 3.9+
+- Virtual environment (recommended)
 
-#### Option 1: Master Launcher (Recommended)
+### Installation & Launch
 ```bash
-python launch.py                    # Launch main app only
-python launch.py --all              # Launch all apps simultaneously
-python launch.py --setup            # Set up virtual environment
-python launch.py --clean            # Clean up temporary files
-```
+# Clone the repository
+git clone https://github.com/mimimakingthings/cyber_tonic.git
+cd cyber_tonic
 
-#### Option 2: Shell Script (Unix/Mac)
-```bash
-./launch.sh                         # Launch main app only
-./launch.sh --all                   # Launch all apps simultaneously
-./launch.sh --setup                 # Set up virtual environment
-./launch.sh --clean                 # Clean up temporary files
-```
-
-#### Option 3: Direct Streamlit
-```bash
-streamlit run apps/main.py
+# Set up environment and launch
+python launch.py --setup
+python launch.py
 ```
 
 ### What Happens
@@ -74,6 +74,32 @@ streamlit run apps/main.py
 2. **Click "Launch Standards Navigator"** - Opens the standards research tool
 3. **Click "Launch Client Portal"** - Opens the client management tool
 4. **Applications open automatically** in new browser tabs
+
+<details>
+<summary>Alternative Launch Methods</summary>
+
+#### Shell Script (Unix/Mac)
+```bash
+./launch.sh                         # Launch main app only
+./launch.sh --all                   # Launch all apps simultaneously
+./launch.sh --setup                 # Set up virtual environment
+./launch.sh --clean                 # Clean up temporary files
+```
+
+#### Direct Streamlit
+```bash
+streamlit run apps/main.py
+```
+
+#### Manual Setup
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run apps/main.py
+```
+
+</details>
 
 ## 📋 Features Overview
 
@@ -250,7 +276,11 @@ python launch.py --clean
 
 ## 📄 License
 
-This project is for educational and professional use in cybersecurity consulting.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🏷️ Topics
+
+`cybersecurity` `compliance` `streamlit` `nist-csf` `data-visualization` `consulting` `assessment` `framework`
 
 ## 🆘 Support
 
@@ -271,3 +301,4 @@ For issues or questions:
 ---
 
 **Happy Consulting! 🛡️**
+

@@ -12,7 +12,19 @@ from typing import Dict, List, Optional, Any
 from pathlib import Path
 
 class StandardsLoader:
-    """Class to handle loading and managing cybersecurity standards data."""
+    """
+    Generic class to handle loading and managing cybersecurity standards data.
+    
+    This class provides a flexible interface for loading different types of
+    cybersecurity standards and frameworks, with support for:
+    - NIST CSF 2.0
+    - ISO 27001:2022 (planned)
+    - CMMC 2.0 (planned)
+    - GDPR (planned)
+    - Custom standards
+    
+    The loader supports caching, validation, and cross-standard mapping.
+    """
     
     def __init__(self, standards_dir: str = "data/standards_data"):
         """
@@ -24,6 +36,15 @@ class StandardsLoader:
         self.standards_dir = Path(standards_dir)
         self._standards_cache = {}
         self._index_cache = None
+        self._supported_standards = {
+            "nist-csf-2.0": {
+                "name": "NIST Cybersecurity Framework 2.0",
+                "type": "Framework",
+                "region": "USA",
+                "version": "2.0",
+                "status": "active"
+            }
+        }
     
     def load_index(self) -> Dict[str, Any]:
         """
@@ -317,6 +338,169 @@ class StandardsLoader:
                 print(f"Error processing statistics for {standard_id}: {e}")
         
         return stats
+    
+    def add_standard_support(self, standard_id: str, metadata: Dict[str, Any]) -> None:
+        """
+        Add support for a new standard.
+        
+        Args:
+            standard_id: Unique identifier for the standard
+            metadata: Dictionary containing standard metadata
+        """
+        self._supported_standards[standard_id] = metadata
+    
+    def get_supported_standards(self) -> Dict[str, Dict[str, Any]]:
+        """
+        Get all supported standards with their metadata.
+        
+        Returns:
+            Dictionary of supported standards with metadata
+        """
+        return self._supported_standards.copy()
+    
+    def validate_standard_structure(self, standard_data: Dict[str, Any]) -> List[str]:
+        """
+        Validate that a standard follows the expected structure.
+        
+        Args:
+            standard_data: The standard data to validate
+            
+        Returns:
+            List of validation errors (empty if valid)
+        """
+        errors = []
+        
+        # Check required top-level fields
+        required_fields = ["standard_id", "name", "overview", "region", "functions"]
+        for field in required_fields:
+            if field not in standard_data:
+                errors.append(f"Missing required field: {field}")
+        
+        # Check functions structure
+        if "functions" in standard_data:
+            for func_name, func_data in standard_data["functions"].items():
+                if not isinstance(func_data, dict):
+                    errors.append(f"Function {func_name} must be a dictionary")
+                    continue
+                
+                if "subcategories" not in func_data:
+                    errors.append(f"Function {func_name} missing subcategories")
+                else:
+                    for control_id, control_data in func_data["subcategories"].items():
+                        if not isinstance(control_data, dict):
+                            errors.append(f"Control {control_id} must be a dictionary")
+                            continue
+                        
+                        # Check control structure
+                        control_required = ["description", "examples", "use_cases", "regional_relevance", "tech_recommendations"]
+                        for field in control_required:
+                            if field not in control_data:
+                                errors.append(f"Control {control_id} missing field: {field}")
+        
+        return errors
+    
+    def create_standard_template(self, standard_id: str, name: str, region: str) -> Dict[str, Any]:
+        """
+        Create a template for a new standard.
+        
+        Args:
+            standard_id: Unique identifier for the standard
+            name: Human-readable name of the standard
+            region: Geographic region (e.g., 'USA', 'EU', 'Global')
+            
+        Returns:
+            Dictionary template for the new standard
+        """
+        template = {
+            "standard_id": standard_id,
+            "name": name,
+            "overview": f"Overview of {name}",
+            "region": region,
+            "version": "1.0",
+            "last_updated": "2025-10-17",
+            "functions": {
+                "EXAMPLE_FUNCTION": {
+                    "name": "Example Function",
+                    "description": "Description of the example function",
+                    "subcategories": {
+                        "EXAMPLE_FUNCTION.EXAMPLE-1": {
+                            "description": "Example control description",
+                            "examples": "Example implementation",
+                            "use_cases": "Example use cases",
+                            "regional_relevance": "High/Medium/Low",
+                            "tech_recommendations": ["Technology 1", "Technology 2"],
+                            "mappings": {
+                                "nist-csf-2.0": "ID.AM-1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        return template
+    
+    def export_standard(self, standard_id: str, output_path: str) -> bool:
+        """
+        Export a standard to a JSON file.
+        
+        Args:
+            standard_id: ID of the standard to export
+            output_path: Path where to save the exported standard
+            
+        Returns:
+            True if export was successful, False otherwise
+        """
+        try:
+            standard_data = self.load_standard(standard_id)
+            output_file = Path(output_path)
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(standard_data, f, indent=2, ensure_ascii=False)
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error exporting standard {standard_id}: {e}")
+            return False
+    
+    def import_standard(self, file_path: str) -> bool:
+        """
+        Import a standard from a JSON file.
+        
+        Args:
+            file_path: Path to the JSON file containing the standard
+            
+        Returns:
+            True if import was successful, False otherwise
+        """
+        try:
+            import_file = Path(file_path)
+            
+            with open(import_file, 'r', encoding='utf-8') as f:
+                standard_data = json.load(f)
+            
+            # Validate the standard structure
+            errors = self.validate_standard_structure(standard_data)
+            if errors:
+                print(f"Validation errors: {errors}")
+                return False
+            
+            # Save to standards directory
+            standard_id = standard_data["standard_id"]
+            output_file = self.standards_dir / f"{standard_id}.json"
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(standard_data, f, indent=2, ensure_ascii=False)
+            
+            # Update cache
+            self._standards_cache[standard_id] = standard_data
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error importing standard from {file_path}: {e}")
+            return False
 
 # Global instance for easy access
 standards_loader = StandardsLoader()

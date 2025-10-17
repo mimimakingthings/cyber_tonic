@@ -1,15 +1,15 @@
 {
   "assessments": {
-    "9ad0ef53-3eb0-4f38-bf7d-f20aba8a2709": {
+    "93ad2a9d-ee56-427f-a235-920529537b72": {
       "GV.OC-01": {
-        "status": "Fully Implemented",
-        "score": 10,
+        "status": "Not Implemented",
+        "score": 0,
         "notes": "",
         "evidence": []
       },
       "GV.OC-02": {
-        "status": "Partially Implemented",
-        "score": 3,
+        "status": "Not Implemented",
+        "score": 0,
         "notes": "",
         "evidence": []
       },
@@ -640,7 +640,7 @@
     }
   },
   "metadata": {
-    "last_updated": "2025-10-17T14:21:29.706708",
+    "last_updated": "2025-10-17T15:16:22.529093",
     "total_clients": 1,
     "version": "2.0",
     "schema_version": "2.0",
